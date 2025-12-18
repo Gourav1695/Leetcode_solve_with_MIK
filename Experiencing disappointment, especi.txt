@@ -1,0 +1,65 @@
+✅First things first-
+Focus on these 3:
+🔸Keep practicing DSA problems
+🔸Revise computer science fundamentals- OS, OOPS, DBMS, etc
+🔸Know everything about the tech stack and projects mentioned in your resume.
+
+✅Company specific preparation-
+Before appearing for technical assessments and interviews for any company, go through blogs and articles about previous year experiences of people, and check out previous year questions on gfg, leetcode, interview bit etc.
+
+✅ Mock Interviews-
+Me and my friends used to take mock interviews of each other. Believe me it really helps to build confidence and identify areas of improvement.
+
+✅ Research and company insights-
+Thoroughly research the company. Learn about their products and services and recent achievements. This can help you tailor your responses accordingly.
+
+✅ Resume Refinement-
+Make sure to make enhancements to your resume every now and then. You might also need to customize your resume according to the role and requirements of the specific role/opportunity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Experiencing disappointment, especially after putting effort and hopes into something like an internship opportunity, can be challenging. Here are some steps you can take to overcome this disappointment and turn it into a positive learning experience:
+
+    Allow Yourself to Feel: It's okay to feel disappointed. Allow yourself to acknowledge your emotions and give yourself permission to feel them.
+
+    Reflect on the Experience: Take some time to reflect on the internship itself. What did you learn? What skills did you develop? What positive experiences did you have? Focus on the valuable aspects of the experience.
+
+    Seek Feedback: If possible, consider reaching out to your internship supervisor or mentor for feedback. This can help you understand areas where you excelled and areas you could work on for future opportunities.
+
+    Maintain Perspective: Remember that one setback doesn't define your entire career. Everyone faces disappointments along the way, and these experiences can contribute to personal growth and resilience.
+
+    Focus on the Positive: Think about the positives you gained from the internship, such as new skills, connections, and insights. Remind yourself of your accomplishments during the internship.
+
+    Set New Goals: Use this experience as motivation to set new goals for yourself. What do you want to achieve in your career? Use this disappointment as fuel to drive you forward.
+
+    Stay Connected: Maintain relationships with the people you worked with during the internship. Networking and staying in touch could lead to future opportunities.
+
+    Explore Other Opportunities: Keep an open mind and explore other internship or job opportunities in your field. Every experience contributes to your growth and helps you refine your career path.
+
+    Practice Self-Care: Engage in activities that bring you joy and help you relax. This could be hobbies, spending time with loved ones, exercising, or practicing mindfulness.
+
+    Learn and Improve: Use the disappointment as a chance to learn and improve. Identify areas where you can enhance your skills, knowledge, or interview techniques.
+
+    Stay Resilient: Disappointments are a part of life, and resilience is the key to bouncing back. Remember that setbacks are temporary and that you have the strength to overcome them.
+
+    Seek Support: If you're struggling to cope with the disappointment, don't hesitate to seek support from friends, family, mentors, or even a professional if needed.
+
+Remember that setbacks are a natural part of any journey, and they can lead to growth and new opportunities. Use this experience as a stepping stone toward your future successes.
