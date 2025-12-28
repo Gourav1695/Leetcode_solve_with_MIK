@@ -40,3 +40,32 @@ public:
 
 // tc --> O(m * logn)
 // sc --> O(1)
+
+
+// --------- Best solution ----------
+
+class Solution {
+public:
+    int countNegatives(vector<vector<int>>& grid) {
+        int m = grid.size();
+        int n = grid[0].size();
+        int result=0;
+        int row = m-1;
+        int col = 0;
+        while(row>=0 && col<n)
+        {
+            if(grid[row][col]>=0)
+            {
+                col++;
+            }
+            else{
+                result+=(n-col);
+                row--;
+            }
+        }
+        return result;
+    }
+};
+
+// tc --> O(m +n)
+// sc --> O(1)
