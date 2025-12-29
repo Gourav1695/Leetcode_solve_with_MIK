@@ -1,0 +1,59 @@
+class Solution {
+public:
+ unordered_map<string,bool>t;
+    bool solve(string curr, unordered_map<string, vector<char>>&mp , int idx, string above)
+    {
+        string key = curr + "-"+to_string(idx)+"-"+above;
+
+        if(t.count(key)){
+            return t[key];
+        }
+        // first case of length 1 , ie pyramid is formed
+        if(curr.length()==1)
+        {
+            return true;
+        }
+        // for length()-1 go to above
+        if(idx==curr.length()-1) // time to move to next row
+        {
+            return t[key]=solve(above,mp,0,"");
+        }
+        string pair = curr.substr(idx,2);
+        if(mp.find(pair)==mp.end())
+        {
+            return t[key]=false;
+        }
+       for(char & ch: mp[pair]){
+        above.push_back(ch); // do
+        if(solve(curr,mp,idx+1,above)==true)
+        {
+            return t[key]=true;
+        }
+        above.pop_back();// undo
+        
+
+       }
+       return t[key]=false;
+    }
+
+    bool pyramidTransition(string bottom, vector<string>& allowed) {
+        unordered_map<string, vector<char>>mp;
+
+        for(auto &pattern : allowed)
+        {
+            mp[pattern.substr(0,2)].push_back(pattern[2]);
+        }
+
+        return solve(bottom,mp, 0,"");
+    }
+};
+
+// 💁🏼
+// SC = O(number_of_states × n)
+ //  = O(k^(n(n-1)/2))
+ 
+// Time Complexity: Exponential in n
+// O(k^(n(n-1)/2)) in worst case, reduced by memoization
+
+// Space Complexity: Exponential in n
+// O(k^(n(n-1)/2)) due to memoization + O(n) recursion stack
