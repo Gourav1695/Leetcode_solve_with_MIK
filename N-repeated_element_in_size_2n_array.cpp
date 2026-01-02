@@ -35,3 +35,25 @@ public:
 
 // tc --> O(n)
 // sc --> O(1)
+
+// --------------------- 3rd Approach ---------------
+
+class Solution {
+public:
+    int repeatedNTimes(vector<int>& nums) {
+        unordered_set<int>st;
+        for(auto &it: nums){
+            if(st.find(it)!=st.end()){
+                return it;
+            }
+            else{
+                st.insert(it);
+            }
+        }
+        return 0;
+    }
+};   
+
+
+// tc --> O(n)
+// sc --> O(n)
