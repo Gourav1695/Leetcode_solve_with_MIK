@@ -19,3 +19,47 @@ public:
 };
 // sc -->O(n)
 // tc -->O(n)
+
+
+// -------------------- Approach 2 :---------------------
+class Solution {
+public:
+    int minimumDeletions(string s) {
+        int n = s.length();
+        vector<int>left_b(n,0);
+        vector<int>right_a(n,0);
+
+        int count_b = 0;
+        int count_a = 0;
+
+        for(int i = 0; i<s.length();i++)
+        {
+            left_b[i]=count_b;
+            if(s[i]=='b'){
+                count_b++;
+            }           
+        }
+        for(int i = s.length()-1; i>=0; i--)
+        {
+            right_a[i]=count_a;
+            if(s[i]=='a'){
+                count_a++;
+            }
+        }
+        // reverse(right_a.begin(),right_a.end());
+        // for(int i = 0 ; i<s.length(); i++)
+        // {
+        //      cout<< right_a[i]<<"a";
+        //      cout<< left_b[i]<<"b";
+        // }
+        int minDeletion = INT_MAX;
+        for(int i= 0 ; i<s.length(); i++)
+        {
+            minDeletion = min(minDeletion,(right_a[i]+left_b[i]));
+        }
+        return minDeletion;
+    }
+};
+
+// tc -->O(2n)~ O(n)
+// sc --> O(n)
