@@ -79,3 +79,45 @@ public:
 
 // tc -->O(n^2)
 // sc -->O(1) as size of map max would be 26
+
+
+// ----------- 3rd way: MIK way:-------------
+class Solution {
+public:
+    bool checkBalance(vector<int>&freq)
+    {
+        int common = 0;
+        for(int i = 0; i<26; i++)
+        {
+            if(freq[i]==0)
+            continue;
+            if(common == 0){
+                common = freq[i];
+            }
+            else if(freq[i]!=common)
+            return false;
+        }
+        return true;
+ 
+    }
+    int longestBalanced(string s) {
+       int maxL = 0;
+       for(int i = 0 ; i<s.length();i++)
+       {
+            vector<int>freq(26);
+            for(int j = i ; j<s.length();j++)
+            {
+                freq[s[j]-'a']++;
+                if(checkBalance(freq)){
+                maxL = max(maxL, j-i+1);
+            }
+
+            }
+           
+       } 
+       return maxL;
+    }
+};
+
+// tc -->O(n^2)
+// sc -->O(1) as size of map max would be 26
