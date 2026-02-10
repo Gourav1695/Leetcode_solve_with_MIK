@@ -35,3 +35,47 @@ public:
 
 // tc -->O(n^2)
 // sc -->O(1) as size of map max would be 26
+
+// ----------------- Approach 2 more optimal using frequency array of size 26: -----------------
+class Solution {
+public:
+    bool checkBalance(vector<int>&freq)
+    {
+    int ref = -1;
+    for(auto it:freq)
+        {
+        if(ref==-1 && it!=0)
+        {
+            ref = it; 
+            break; 
+        }
+       }
+       for(auto it: freq)
+       {
+            if(it!=ref && it!=0){
+                return false;
+            }
+       }
+        return true;
+    }
+    int longestBalanced(string s) {
+       int maxL = 0;
+       for(int i = 0 ; i<s.length();i++)
+       {
+            vector<int>freq(26);
+            for(int j = i ; j<s.length();j++)
+            {
+                freq[s[j]-'a']++;
+                if(checkBalance(freq)){
+                maxL = max(maxL, j-i+1);
+            }
+
+            }
+           
+       } 
+       return maxL;
+    }
+};
+
+// tc -->O(n^2)
+// sc -->O(1) as size of map max would be 26
