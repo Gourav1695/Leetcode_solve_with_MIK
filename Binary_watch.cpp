@@ -1,0 +1,25 @@
+class Solution {
+public:
+    vector<string> readBinaryWatch(int turnedOn) {
+        vector<string> result;
+        for(int hh = 0; hh<=11; hh++)
+        {
+            for(int mm = 0 ; mm<= 59; mm++)
+            {
+                if(__builtin_popcount(hh)+__builtin_popcount(mm)== turnedOn){
+                    result.push_back(to_string(hh)+":"+(mm<10?"0":"")+
+                    to_string(mm));
+                }
+            }
+        }
+        for(auto it: result)
+        {
+            cout<<it<<" ";
+        }
+        cout<<endl;
+        return result;
+    }
+};
+
+// tc --> O(1)
+// sc --> O(1)
