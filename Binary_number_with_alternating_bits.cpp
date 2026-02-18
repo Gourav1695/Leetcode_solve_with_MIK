@@ -32,3 +32,25 @@ public:
 };
 // tc -->O(logn)
 // sc --> O(1)
+
+// ---------------- Appraoch 3 : -------------
+
+class Solution {
+public:
+    bool hasAlternatingBits(int n) {
+        int currbit = n%2;
+        n = n/2;
+        while(n>0)
+        {
+            if(currbit == n%2){
+                return false;
+            }
+            currbit = n%2;
+            n = n/2;
+        }
+        return true;
+    }
+};
+
+// tc -->O(log2(n))
+// sc -->O(1)
