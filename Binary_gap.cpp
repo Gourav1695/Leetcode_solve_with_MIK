@@ -22,3 +22,29 @@ public:
 
 // tc -->O(n)
 // sc -->O(1)
+
+// ------------- appraoch 2 : optimal:-------
+class Solution {
+public:
+    int binaryGap(int n) {
+        int pos = 0;
+        int last = -1;
+        int ans = 0;
+
+       while(n>0)
+       {
+            if(n&1){
+                if(last!=-1){
+                ans = max (ans, pos - last);
+                }
+                last = pos;
+            }
+            pos++;
+            n = n>>1;
+       }
+       return ans;
+    }
+};
+
+// tc -->O(1)
+// sc -->O(1)
