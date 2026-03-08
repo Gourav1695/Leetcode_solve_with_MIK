@@ -22,3 +22,27 @@ public:
 
 // tc -->O(n^2)
 // sc -->O(n)
+
+// ------------ Optimised approach:------------
+class Solution {
+public:
+    string findDifferentBinaryString(vector<string>& nums) {
+        // create a for loop for n size where I will check the element indexed element 
+        // and create result from it.
+        string result = "";
+        for(int i = 0 ; i< nums.size();i++)
+        {
+            char it  = nums[i][i];
+            if(it=='0'){
+                result+='1';
+            }
+            else{
+                result+='0';
+            }
+        }
+        return result;
+    }
+};
+
+// tc -->O(n)
+// sc -->O(1)
