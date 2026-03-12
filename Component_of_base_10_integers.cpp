@@ -27,3 +27,27 @@ public:
 
 // tc -->O(1)
 // sc -->O(1)
+
+
+// ---------- Approach 2 :----------
+class Solution {
+public:
+    int bitwiseComplement(int n) {
+        int res = 0;
+        int count = 0;
+        if( n==0){
+            return 1;
+
+        }
+        while(n!=0){
+            int r = n%2;
+            n = n/2;
+            res += pow(2,count)*(!r);
+            count++;
+        }
+        return res;
+    }
+};
+
+// tc -->O(logn)
+// sc -->O(1)
