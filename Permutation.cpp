@@ -34,3 +34,34 @@ public:
 
 // n! permutations × O(n) work per permutation
 // = O(n × n!)
+
+// ------------ Approach 2 : ------
+class Solution {
+public:
+    vector<vector<int>>result;
+    void solve(int idx, vector<int>nums){
+        if(idx== nums.size()){
+            result.push_back(nums);
+            return ;
+        }
+
+        for(int i = idx; i< nums.size(); i++)
+        {
+            // do
+            // explore
+            // undo
+            swap(nums[idx],nums[i]);
+            solve(idx+1, nums);
+            swap(nums[idx],nums[i]);
+           
+        }
+    }
+    vector<vector<int>> permute(vector<int>& nums) {
+        int idx = 0;
+        solve(idx,nums);
+        return result;
+    }
+};
+
+// t.c -->O(n * n!)
+// sc -->O(n * n!)
