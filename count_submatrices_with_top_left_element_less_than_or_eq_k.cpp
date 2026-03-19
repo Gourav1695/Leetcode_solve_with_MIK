@@ -27,3 +27,33 @@ public:
 
 // tc -->O(m*n)
 // sc -->O(1)
+
+
+// ------------ Bruit force solution:--------------
+class Solution {
+public:
+    int countSubmatrices(vector<vector<int>>& grid, int k) {
+        int m = grid.size(); // row
+        int n = grid[0].size(); // column
+        int count = 0;
+        
+        for(int i = 0; i<m;i++)
+        {
+            for(int j = 0; j<n ;j++){
+                int sum = 0;
+                for(int k = 0; k<=i; k++){
+                    for(int l = 0 ; l <=j; l++){
+                        sum +=grid[k][l];
+                    }
+                }
+                if(sum<=k){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+};
+
+// tc -->O(m^2*n^2)
+// sc -->O(1)
