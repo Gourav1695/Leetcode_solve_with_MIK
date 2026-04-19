@@ -1,3 +1,22 @@
+// Brute force:
+class Solution {
+public:
+    int maxDistance(vector<int>& nums1, vector<int>& nums2) {
+        int n = nums1.size();
+        int maxm = INT_MIN;
+        for(int i = 0; i<n; i++){
+            for(int j = i ; j<nums2.size(); j++){
+                if(nums1[i]<=nums2[j])
+                maxm = max((j-i),maxm);
+            }
+        }
+        return maxm == INT_MIN?0: maxm;
+    }
+};
+
+
+// ----------- Optimal-----------
+
 class Solution {
 public:
     int maxDistance(vector<int>& nums1, vector<int>& nums2) {
