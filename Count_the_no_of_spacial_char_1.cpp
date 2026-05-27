@@ -40,3 +40,32 @@ public:
 
 // tc -->O(n)
 // sc -->O(1)
+
+// --------- Optimal way only one pass ----------------
+class Solution {
+public:
+    int numberOfSpecialChars(string word) {
+        int freq[123] = {0};
+        int count = 0;
+
+        for(auto ch: word){
+            freq[ch]++;
+            if(ch>='a' && ch<='z'){ // small letters
+                if(freq[ch -'a'+'A']>0 && freq[ch]==1){
+                    count++;
+                }
+            }else{
+                // letter is capital
+                if(freq[ch]==1 && freq[ch-'A'+'a']>0){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+};
+
+
+
+// tc -->O(n)
+// sc -->O(1)
