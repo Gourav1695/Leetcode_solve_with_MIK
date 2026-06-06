@@ -21,3 +21,30 @@ public:
 
 // tc -->O(n)
 // sc --> O(n)
+
+
+// ------------- Optimal way----------------
+
+class Solution {
+public:
+    vector<int> leftRightDifference(vector<int>& nums) {
+        
+        vector<int>ans(nums.size());
+        int total = 0;
+        int cum = 0;
+       
+        for(int i = 0; i<nums.size();i++){
+         total+=nums[i];
+        }
+        for(int i = 0; i<nums.size();i++){
+            int leftSum = cum;
+            cum+=nums[i];
+            int rightSum = total - cum;
+            ans[i]= abs(leftSum-rightSum);
+        }
+        return ans;
+    }
+};
+
+// tc -->O(n)
+// sc --> O(1)
